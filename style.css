@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --primary-color: #073b4c;
+    --secondary-color: #ef476f;
+    --secondary-color-m: #ef476f8e;
+    --tertiary-color: #118ab2;
+    --tertiary-color-m: #118ab298;
+}
+
+body{
+    font-family:'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    display: flex;
+}
+
+#sideNav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+div.sideNavContent{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+div.sideNavContentLogo img{
+    width: calc(3vw + 3vh); 
+    object-fit: cover;
+}
+ul.sideNavContentSocial {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+ul.sideNavContentSocial a i{
+    font-size: calc(1rem + 0.66667vw);
+    color: white;
+    padding-bottom: calc(2rem + 0.6667vw);
+    transition: color 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+ul.sideNavContentSocial a i:hover,
+ul.sideNavContentSocial a i:active{
+    color: var(--secondary-color)
+}
