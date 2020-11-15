@@ -16,7 +16,7 @@
 }
 
 body{
-    font-family:'Noto Sans JP', sans-serif;
+    font-family:'Noto Sans KR', sans-serif;
     line-height: 1.8;
     display: flex;
 }
@@ -118,6 +118,82 @@ ul.mainNavLinks li a:hover::after,
 ul.mainNavLinks li a:active::after{
     transform: scaleX(1);
 }
+
+
+section#wall{
+    height: 100vh;
+    background-image: url('https://wallpaperaccess.com/full/1261770.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.content{
+    background-color: var(--secondary-color-m);
+    padding: calc(1rem + 2vw);
+    height: calc(5rem + 20vmax);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: hero 1s cubic-bezier(.19,.76,.48,1.61);
+}
+.contentTitle{
+    font-size: calc(2rem + 3vw);
+    color: white;
+}
+.contentPara{
+    font-size: calc(1.5rem + 1vw);
+    font-weight: 500;
+    color: white;
+}
+.contentLink:link,
+.contentLink:visited{
+    padding: 1rem 1rem;
+    transition: all 0.5s ease-in-out;
+    width: 9rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    position: relative;
+    z-index: 1;
+}
+.contentLink:link::after,
+.contentLink:visited::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index:-1 ;
+}
+.contentLink:hover::after,
+.contentLink:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+@keyframes hero{
+    0%{
+        transform: translateX(100rem) rotate(270deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 @media screen and (max-width: 610px){
     header#header{
         position: absolute;
@@ -194,5 +270,11 @@ ul.mainNavLinks li a:active::after{
     }
     ul.mainNavLinks li.fade{
         opacity: 1;
+    }
+}
+@media screen and (max-width: 750px){
+    section#wall{
+        background-position: 100%;
+        align-items: flex-end;
     }
 }
