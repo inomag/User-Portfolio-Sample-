@@ -193,6 +193,31 @@ div.content{
     }
 }
 
+section#project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 2rem;
+    background-color: var(--tertiary-color);
+}
+div.projectCard{
+    padding: 2rem;
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
+
+div.projectCard img{
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+div.projectCard img:hover,
+div.projectCard img:active{
+    filter: brightness(70%);
+}
 
 @media screen and (max-width: 610px){
     header#header{
