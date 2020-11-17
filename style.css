@@ -8,13 +8,12 @@
 
 :root{
     font-size: 62.5%;
-    --primary-color: #0b0c10;
-    --secondary-color: #1f2833;
-    --secondary-color-m: #66fc1f1;
-    --tertiary-color:#c5c6c7;
+    --primary-color: #073b4c;
+    --secondary-color: #ef476f;
+    --secondary-color-m: #ef476f8e;
+    --tertiary-color: #118ab2;
     --tertiary-color-m: #118ab298;
 }
-
 body{
     font-family:'Noto Sans KR', sans-serif;
     line-height: 1.8;
@@ -118,20 +117,16 @@ ul.mainNavLinks li a:hover::after,
 ul.mainNavLinks li a:active::after{
     transform: scaleX(1);
 }
-
-
 section#wall{
     height: 100vh;
-    background-image: url('https://i.pinimg.com/originals/f2/3b/a4/f23ba4b794d544895c670e221b6ceb32.jpg');
+    background-image: url('https://wallpaperaccess.com/full/1261770.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-
 div.content{
     background-color: var(--secondary-color-m);
     padding: calc(1rem + 2vw);
@@ -143,17 +138,13 @@ div.content{
 }
 .contentTitle{
     font-size: calc(2rem + 3vw);
-    color: var(--primary-color);
+    color: white;
 }
 .contentPara{
     font-size: calc(1.5rem + 1vw);
     font-weight: 500;
-    color: var(--secondary-color);
+    color: white;
 }
-.contentLink{
-    color: var(--tertiary-color);
-}
-
 .contentLink:link,
 .contentLink:visited{
     padding: 1rem 1rem;
@@ -184,8 +175,6 @@ div.content{
     transform: scaleX(1);
     transform-origin: left;
 }
-
-
 @keyframes hero{
     0%{
         transform: translateX(100rem) rotate(270deg);
@@ -244,6 +233,7 @@ div.projectCard img:active{
        height: 5rem;
        position: fixed;
        top: 2rem;
+       right: 3rem;
        right: 3rem;
        cursor: pointer;
        background-color: var(--secondary-color);
