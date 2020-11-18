@@ -9,6 +9,7 @@
 :root{
     font-size: 62.5%;
     --primary-color: #073b4c;
+    --primary-color-m: #073b4cd7;
     --secondary-color: #ef476f;
     --secondary-color-m: #ef476f8e;
     --tertiary-color: #118ab2;
@@ -147,6 +148,7 @@ div.content{
 }
 .contentLink:link,
 .contentLink:visited{
+    text-align: center;
     padding: 1rem 1rem;
     transition: all 0.5s ease-in-out;
     width: 9rem;
@@ -186,15 +188,17 @@ div.content{
     }
 }
 
+
+
 section#project {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     padding: 2rem;
     background-color: var(--tertiary-color);
 }
 div.projectCard{
+    position: relative;
     padding: 2rem;
     flex-basis: 40rem;
     flex-grow: 1;
@@ -211,6 +215,47 @@ div.projectCard img:hover,
 div.projectCard img:active{
     filter: brightness(70%);
 }
+
+
+
+.overlay {
+    border-radius: 50px;
+    object-fit: cover;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 2rem;
+    /* height: 100%;
+    width: 100%; */
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--primary-color-m);
+  }
+  div.projectCard:hover .overlay,
+  div.projectCard:active .overlay {
+    opacity: 1;
+  }
+  .name{
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  .text {
+    color: white;
+    font-size: 1.5rem;
+    word-wrap: normal;
+    text-align: center;
+  }
+
+
+
 
 @media screen and (max-width: 610px){
     header#header{
