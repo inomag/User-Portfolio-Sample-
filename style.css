@@ -8,14 +8,14 @@
 }
 :root{
     font-size: 62.5%;
-    --primary-color: #000000;
-    --primary-color-m: #000000a8;
-    --secondary-color: #52057b;
-    --secondary-color-m: #52057bab;
-    --tertiary-color: #5b1e91;
-    --tertiary-color-m: #5b1e91ab;
-    --light-color: #bc6ff1;
-    --light-color-m:#bc6ff1ab;
+    --darkest-color: #202225;
+    --darkest-color-m: #202225ab;
+    --darker-color:#2f3136;
+    --darker-color-m: #2f3136ab;
+    --dark-color: #36393f;
+    --dark-color-m: #36393fab;
+    --light-color: #99aab5;
+    --light-color-m:#99aab5ab;
 }
 body{
     font-family:'Noto Sans KR', sans-serif;
@@ -46,7 +46,7 @@ div.sideNavContent{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: var(--darkest-color);
 }
 div.sideNavContentLogo img{
     width: calc(3vw + 3vh); 
@@ -54,10 +54,11 @@ div.sideNavContentLogo img{
     object-fit: cover;
 }
 div.sideNavContentLogo img:hover{
+    top: 0;
+    left: 0;
     animation-name: scale;
     animation-duration: 100ms;
     animation-fill-mode: forwards;
-    border-radius: 50%;
 }
 
 @keyframes scale {
@@ -65,10 +66,10 @@ div.sideNavContentLogo img:hover{
       transform: none;
     }
     50%{
-      transform: scalex(1.5) scaleY(1.5) translateX(10px) translateY(10px);
+      transform: scalex(2) scaleY(2) translateX(10px) translateY(10px);
     }
     100%{
-        transform: scalex(2) scaleY(2) translateX(15px) translateY(15px);
+        transform: scalex(2.5) scaleY(2.5) translateX(15px) translateY(15px);
     }
   }
 ul.sideNavContentSocial {
@@ -102,13 +103,14 @@ nav#mainNav{
     position: fixed;
     top: 0;
     right: -25rem;
-    background-color: var(--secondary-color);
+    background-color: var(--darker-color);
     text-align: center;
 }
 .clicked{
     left: calc(100vw - 25rem);
 }
 nav#mainNav div.mainNavHamburg{
+   border: 2px var(--light-color) solid;
    width: 5rem;
    height: 5rem;
    position: fixed;
@@ -116,7 +118,7 @@ nav#mainNav div.mainNavHamburg{
    right: 3rem;
    right: 3rem;
    cursor: pointer;
-   background-color: var(--primary-color);
+   background-color: var(--darkest-color);
    padding: 1rem;
    border-radius: 50%;
    display: flex; 
@@ -141,10 +143,10 @@ ul.mainNavLinks li{
     margin-bottom: 4vh;
 }
 .clicked .line-1{
-    transform: rotateZ(-765deg) translate(-0.7rem, 0.5rem);
+    transform: rotateZ(-405deg) translate(-0.7rem, 0.5rem);
 }
 .clicked .line-3{
-    transform: rotateZ(765deg) translate(-0.7rem, -0.5rem);
+    transform: rotateZ(405deg) translate(-0.7rem, -0.5rem);
 }
 .clicked .line-2{
     opacity: 0;
@@ -209,24 +211,26 @@ ul.mainNavLinks li a:active::after{
 
 section#wall{
     height: 100vh;
-    background-image: url('https://cdn.wallpapersafari.com/90/67/oHA0wZ.jpg');
+    background-image: url('images/wall.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
 }
 div.content{
-    background-color: var(--secondary-color-m);
+    background-color: var(--darker-color-m);
     padding: calc(1rem + 2vw);
     height: calc(5rem + 20vmax);
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: space-between;
     animation: hero 1s cubic-bezier(.19,.76,.48,1.61);
 }
 .contentTitle{
+    text-transform: uppercase;
     font-size: calc(2rem + 3vw);
     color: white;
 }
@@ -255,7 +259,7 @@ div.content{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--darkest-color);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -284,7 +288,7 @@ section#project {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    background-color: var(--tertiary-color);
+    background-color: var(--dark-color);
 }
 div.projectCard{
     position: relative;
@@ -324,7 +328,7 @@ div.projectCard img:active{
     width: 100%; */
     opacity: 0;
     transition: .5s ease;
-    background-color: var(--primary-color-m);
+    background-color: var(--darkest-color-m);
   }
   div.projectCard:hover .overlay,
   div.projectCard:active .overlay {
@@ -349,7 +353,7 @@ section#aboutMe{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem;
-    background-color: var(--secondary-color);
+    background-color: var(--darker-color);
 }
 .aboutMeImg,
 .aboutMeContent{
@@ -358,6 +362,7 @@ section#aboutMe{
     flex-grow: 1;
 }
 .aboutMeImg{
+    filter: grayscale(20);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -365,7 +370,7 @@ section#aboutMe{
 .aboutMeTitle{
     font-size: 4rem;
     padding: 1rem 0;
-    color: var(--primary-color);
+    color: var(--light-color);
     text-transform: uppercase;
     position: relative;
 }
@@ -384,7 +389,7 @@ section#aboutMe{
     letter-spacing: 0.2rem;
 }
 .aboutMePara{
-    color: var(--light-color);
+    color: white;
     font-size: 1.8rem;
     font-family:'Noto Sans KR', sans-serif;
 }
@@ -409,7 +414,7 @@ section#aboutMe{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--darkest-color);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
