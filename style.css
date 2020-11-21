@@ -211,7 +211,7 @@ ul.mainNavLinks li a:active::after{
 
 section#wall{
     height: 100vh;
-    background-image: url('images/wall.jpg');
+    background-image: url('https://images.unsplash.com/photo-1541323429887-2e393b8db71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
