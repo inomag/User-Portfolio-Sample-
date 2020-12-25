@@ -362,7 +362,7 @@ section#aboutMe{
     flex-grow: 1;
 }
 .aboutMeImg{
-    filter: grayscale(20);
+    /* filter: grayscale(10); */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -431,7 +431,11 @@ section#aboutMe{
         background-position: 100%;
         align-items: flex-end;
     }
+    div.content{
+    height: calc(5rem + 25vmax);
+    }
 }
+
 
 
 
