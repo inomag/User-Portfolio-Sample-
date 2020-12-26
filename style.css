@@ -425,7 +425,143 @@ section#aboutMe{
     transform: scaleY(1);
     transform-origin: top;
 }
+section#skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
+    padding: 0 calc(1rem + 2vw);
+    background-color: var(--light-color);    
+}
+.codingSkill,
+.designSkill{
+    padding: calc(1rem + 2vw);
+    text-transform: uppercase;
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
+.codingTitle,
+.designTitle{
+   font-size: 3rem;
+   margin-bottom: 2rem; 
+}
+.codingSkill h4,
+.designSkill h4{
+    font-size: 2rem;
+    color: var(--darker-color);
+}
+.designProgress,
+.codingProgress{
+    position: relative;
+    display: block;
+    padding: 0.3rem;
+    border-radius: 3rem;
+    background-color: var(--darkest-color);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.designProgress span,
+.codingProgress span{
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    height: 1rem;
+    border-radius: 3rem 0 0 3rem;
+    margin: 0 0.2rem;
+    /* width: 50%; */
+    background-color: var(--light-color);
+}
+.designProgress1{
+    animation: design1 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design1{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 68%;
+    }
+}
+.designProgress2{
+    animation: design2 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design2{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 75%;
+    }
+}
+.designProgress3{
+    animation: design3 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design3{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 43%;
+    }
+}
+.designProgress4{
+    animation: design4 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design4{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 33%;
+    }
+}
+
+
+.codingProgress1{
+    animation: design5 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design5{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 78%;
+    }
+}
+.codingProgress2{
+    animation: design6 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design6{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 85%;
+    }
+}
+.codingProgress3{
+    animation: design7 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design7{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 55%;
+    }
+}
+.codingProgress4{
+    animation: design8 2s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes design8{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 51%;
+    }
+}
 @media screen and (max-width: 750px){
     section#wall{
         background-position: 100%;
