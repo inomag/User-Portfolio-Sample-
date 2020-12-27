@@ -220,6 +220,8 @@ section#wall{
     align-items: flex-start;
 }
 div.content{
+    box-shadow:  -9px -9px 17px #1e1f23, 
+             9px 9px 17px #404349;
     background-color: var(--darker-color-m);
     padding: calc(1rem + 2vw);
     height: calc(5rem + 20vmax);
@@ -298,7 +300,7 @@ div.projectCard{
 }
 
 div.projectCard img{
-    border-radius: 50px;
+    /* border-radius: 50px; */
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -312,7 +314,7 @@ div.projectCard img:active{
 
 
 .overlay {
-    border-radius: 50px;
+    /* border-radius: 50px; */
     object-fit: cover;
     position: absolute;
     display: flex;
@@ -562,6 +564,61 @@ section#skills{
         width: 51%;
     }
 }
+
+section#contact{
+    height: 100vh;
+    background-image: url("images/800252.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40rem;
+    padding: 2rem;
+    /* background-color: var(--darkest-color-m); */
+}
+.contactForm input,
+.contactForm textarea{
+    color: var(--light-color);
+    /* font-family: 'Indie Flower', cursive; */
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    padding: 2rem;
+    /* background-color: var(--darkest-color-m); */
+    margin: 0.5rem;
+    border: none;
+    background: linear-gradient(45deg, #1b1b1b, #202020);
+    box-shadow:  5px -5px 5px #191919, 
+             -5px 5px 5px #232323;
+}
+.contactForm textarea{
+    height: 30vh;
+}
+input[type=submit]:hover{
+    animation: hovering 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    color: white;
+    border: var(--darker-color) 1px solid;
+    cursor: pointer;
+}
+@keyframes hovering {
+    0% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      -webkit-transform: translateZ(100px);
+              transform: translateZ(100px);
+      -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
 @media screen and (max-width: 750px){
     section#wall{
         background-position: 100%;
